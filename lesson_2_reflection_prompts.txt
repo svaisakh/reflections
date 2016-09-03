@@ -7,6 +7,29 @@ What happens when you initialize a repository? Why do you need to do it?
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
+	The working directory is just a plain ol' directory on your computer.
+	There's nothing special about it, nor is it related to file sharing,
+	version control, Git or any hocus pocus.
+
+	The repository is a collection of snapshots of all your files on
+	the working directory. It resides with Git and is actually meta-
+	data that is used to track 'changes' to the files.
+
+	The staging area is an intermediate buffer of files that mediates
+	transfer from the working directory to the repository.
+	You add files that you want to commit to the staging area first.
+	And then, when you do commit, all the files in the staging area
+	are tracked by git and stored in the repository.
+
+	If there were no staging area, we'd have two options:
+		1. Commit files individually:
+			Monsterously unthinkable in a big bad project.
+		2. Commit all files:
+			What if a few files led to a logical change?
+			Why would you keep track of them?
+
+	The staging area provides flexibility to the programmer.
+
 How can you use the staging area to make sure you have one commit per logical
 change?
 
