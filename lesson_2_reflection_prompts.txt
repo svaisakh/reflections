@@ -11,7 +11,7 @@ What value do you think it offers?
 	There's nothing special about it, nor is it related to file sharing,
 	version control, Git or any hocus pocus.
 
-	The repository is a collection of snapshots of all your files on
+	The repository is a collection of snapshots of all your chosen files on
 	the working directory. It resides with Git and is actually meta-
 	data that is used to track 'changes' to the files.
 
@@ -33,13 +33,66 @@ What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+	Frequently, a single logical change does not span all files. The solution
+	is to add only the relevant files that have changed to the staging area.
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+	Branches literally symbolize deviation.
+	Whenever I'd want to deviate from the 'master' branch, I would branch
+	the repository.
+
+	If I were to download an open source software and I see a new feature
+	I'd like to contribute, instead of modifying (with potentially lethal
+	consequences) the master branch, I could create a 'vaisakh' branch
+	just for me and my things.
+
+	Then, when I am confident enough about what I did, I could show
+	it to other collaborators. If we agree, we could merge it with the
+	master, thereby adding a new feature. Or better yet, taking
+	the project to a new direction!
+	All with zero risk.
+
+	Locally, if I were to spin the game off in a different direction,
+	or fool around with it, I could try it out in a new branch.
+
+	Note to self: Think GoLGame from GoL
+
 How do the diagrams help you visualize the branch structure?
+
+	The diagrams are very organic.
+	They look like an actual tree with branches, ...
+
+	which is the way that git branches were designed andsupposed to work.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+	Merging two branches effectively creates a new commit with all the
+	changes in the two branches combined.
+
+	This new commit will have the tips of both branches as parents.
+
+	The diagram is good way to visualize this. It shows the two branches
+	joined into a single tip - the merged commit.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+	Pros:
+		1. Saves time. I don't have to run after every line to see what
+		changed and what remained.
+		For small changes, this could be a game changer!
+
+		2. Instant implementation. I can instantly see all the new goodness
+		incorporated from both branches.
+
+	Cons:
+		1. May break code. If some portion of the code depends
+		on another implementation, this may cause problems.
+
+		2. Code conflict. If A intended something and B intended
+		something else, they probably need to have talked before
+		merging. With auto-merging, they'll find it hard to trace
+		back to the common code.
