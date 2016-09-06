@@ -1,7 +1,19 @@
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    Fill in your answer here
+    If it's something I expect others to be working on, I'd better not store
+    code in a local repo. For example, if I am making a proprietary software
+    with a team, it needs to be accessable and editable by everyone. Or,
+    if it's an open source project, I expect collaborators to get their
+    hands dirty as well.
+    
+    Even if I don't expect others to use it, I might as well make a
+    GitHub repo since it is cloud connected. I can access it easily
+    everwhere I go, and I don't need to rely on my whimpy little hard
+    drive.
+    
+    Note to self: Can't I just store my local repo in Dropbox to
+    circumvent this?
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
