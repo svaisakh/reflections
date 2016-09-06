@@ -18,7 +18,21 @@ local?
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    Simple reason...
+    I have no idea what changes were made.
+
+    What if the changes is in the file I am currently working on?
+    Better yet, what if the LINE I am on right now was changed by someone
+    else?
+    What happens when I find that in the next second, all my hard work
+    is gone, automatically?
+
+    You don't want me angry.
+
+    The solution is to let me decide when I've made a logical, local change.
+    Then, I can pull the repo to find what else has changed.
+    If there's a conflict, Git will let me know, and I can trash-talk the other
+    collaborators and have my way.
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
