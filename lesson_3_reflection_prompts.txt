@@ -58,14 +58,59 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    When collaborating, it is imperative to know what changes were commited
+    locally and to separate them from remote changes.
+
+    Git does this ridiculously simply using its inbuilt branching mechanism.
+
+    When local changes are made, they are made on the master branch
+    (or any others). Remote changes are made on the master branch
+    of the remote repo.
+
+    A fetch request fetches all remote changes to master and commits them
+    to the local origin/master (different name depending on the remote and 
+    branch name) branch.
+
+    These changes can then be viewed through git diff master origin/master.
+
+    Once finallized, the branches can be merged locally and pushed if
+    needed.
+
+    A pull request combines the two commands (i.e. fetch and pull).
+
+    If there were no fetching mechanism, how would git keep track of what
+    changes were made and where? 
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    Tedious.
+
+    There would probably be someone who is in charge of making sense of all
+    the changes and putting it all together.
+
+    The code would be heavily commented and segmented.
+
+    Filenames would need to have suffixes with version numbers and an ID
+    for the collaborator.
+
+    If this is an open source project where I expect a lot of independent
+    collaborators, I wouldn't be able to manage.
+
+    All in all, it would be a pain in the f**g**s.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    Same as local.
+
+    If I am working on something that will take multiple commits to add/fix/experiment
+    with, I'll likely want to do it in a separate branch.
+
+    This is especially usefull when collaborating as it allows others to see exactly
+    what you were working on and the entire history of commits that led to it.
+
+    It also allows for flexibility since, more than likely, by the time the change is
+    made, other changes will have also been made.
+
+    It's nice to incorporate all changes into what you're doing.
